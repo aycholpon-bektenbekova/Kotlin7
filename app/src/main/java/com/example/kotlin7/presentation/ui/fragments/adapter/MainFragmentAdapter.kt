@@ -1,12 +1,17 @@
 package com.example.kotlin7.presentation.ui.fragments.adapter
 
+import android.content.ClipData.Item
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin7.databinding.FragmentMainBinding
 import com.example.kotlin7.domain.model.Note
+import kotlin.reflect.KFunction1
 
-class MainFragmentAdapter: RecyclerView.Adapter<MainFragmentAdapter.MainFragmentViewHolder>() {
+class MainFragmentAdapter(
+    //private var onItemClickListener: () -> <Unit>,
+
+    ): RecyclerView.Adapter<MainFragmentAdapter.MainFragmentViewHolder>() {
 
     private var notes = arrayListOf<Note>()
 
@@ -29,7 +34,9 @@ class MainFragmentAdapter: RecyclerView.Adapter<MainFragmentAdapter.MainFragment
         fun bind() {
             val task = notes[adapterPosition]
 
-            binding.rvNotes.adapter = this@MainFragmentAdapter
+            itemView.setOnClickListener {
+                //onItemClickListener.invoke()
+            }
         }
     }
 }

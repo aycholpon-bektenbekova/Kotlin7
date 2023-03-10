@@ -10,10 +10,12 @@ import com.example.kotlin7.domain.model.Note
 import com.example.kotlin7.presentation.base.BaseFragment
 import com.example.kotlin7.presentation.utils.UIState
 import com.example.kotlin7.presentation.viewmodel.CreateViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CreateNoteFragment : BaseFragment(R.layout.fragment_create_note) {
 
-    private val viewModel: CreateViewModel by viewModels<CreateViewModel> ()
+    private val viewModel: CreateViewModel by viewModels()
     private val binding by viewBinding(FragmentCreateNoteBinding::bind)
 
     override fun setUpSubscribers() {

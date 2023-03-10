@@ -11,10 +11,12 @@ import com.example.kotlin7.presentation.base.BaseFragment
 import com.example.kotlin7.presentation.ui.fragments.adapter.MainFragmentAdapter
 import com.example.kotlin7.presentation.utils.UIState
 import com.example.kotlin7.presentation.viewmodel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainFragment() : BaseFragment(R.layout.fragment_main) {
+@AndroidEntryPoint
+class MainFragment : BaseFragment(R.layout.fragment_main) {
 
-    private val viewModel: MainViewModel by viewModels<MainViewModel> ()
+    private val viewModel: MainViewModel by viewModels()
     private val adapter = MainFragmentAdapter()
     private val binding by viewBinding(FragmentMainBinding::bind)
 
