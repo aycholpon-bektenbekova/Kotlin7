@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Kotlin7"
-include ':app'
+include (":app")

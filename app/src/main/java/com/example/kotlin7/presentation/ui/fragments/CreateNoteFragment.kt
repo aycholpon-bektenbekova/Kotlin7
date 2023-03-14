@@ -40,8 +40,7 @@ class CreateNoteFragment : BaseFragment(R.layout.fragment_create_note) {
         viewModel.createNotes(
             Note (
                title = binding.tvTitle.text.toString(),
-                description = binding.tvDesc.text.toString(),
-                createdAt = Long.MAX_VALUE
+                description = binding.tvDesc.text.toString()
             )
         )
     }
