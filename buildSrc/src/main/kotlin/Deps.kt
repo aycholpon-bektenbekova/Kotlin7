@@ -30,6 +30,9 @@ object Deps{
         const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
         const val compiler = "com.google.dagger:hilt-compiler:${Versions.hilt}"
     }
+    object Javax {
+        const val inject = "javax.inject:javax.inject:1"
+    }
     object Room {
         const val room = "androidx.room:room-runtime:${Versions.room}"
         const val compiler = "androidx.room:room-compiler:${Versions.room}"
@@ -59,5 +62,8 @@ object Plugins{
         const val android = "org.jetbrains.kotlin.android"
         const val kapt = "kotlin-kapt"
         const val jvm = "org.jetbrains.kotlin.jvm"
+    }
+    object Java {
+        const val library = "java-library"
     }
 }

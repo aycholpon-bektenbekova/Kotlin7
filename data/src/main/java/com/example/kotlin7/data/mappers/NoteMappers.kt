@@ -8,15 +8,13 @@ fun toNote(noteEntity: NoteEntity):Note{
         noteEntity.id,
         noteEntity.title,
         noteEntity.description,
-        noteEntity.createdAt
         )
 }
 
-fun toNoteEntity(note: Note):NoteEntity{
+fun toNoteEntity(note: Note): NoteEntity {
     return NoteEntity(
         note.id,
         note.title,
         note.description,
-        note.createdAt
     )
 }

@@ -41,6 +41,10 @@ android {
 
 dependencies {
 
+    //module
+    implementation(project(":data"))
+    implementation(project(":domain"))
+
     implementation (Deps.UI.androidCore)
     implementation (Deps.UI.appCompat)
     implementation (Deps.UI.material)
